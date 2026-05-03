@@ -11,7 +11,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin(origins = {"http://localhost:4173"})
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "http://localhost:4173",
+    "https://your-app-name.netlify.app"
+})
 public class AuthController {
 
     private final AuthService authService;
